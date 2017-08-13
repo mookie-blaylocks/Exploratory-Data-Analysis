@@ -67,7 +67,7 @@ d <- data.frame(Year, Emissions, City)
 
 g <- ggplot(d, aes(Year, Emissions))
 g <- g + geom_point(size=2) + facet_grid(. ~ City) + geom_line() +
-    labs(title="pm2.5 Emission Change 1999 to 2008: Baltimore and Los Angeles",
-         ylab="pm2.5 Emissions as Percent of 1999")
+         ggtitle("pm2.5 Emission Change 1999 to 2008: Baltimore and Los Angeles") +
+         ylab("pm2.5 Emissions as Percent of 1999")
 
 ggsave("plot6.png", plot=g)
